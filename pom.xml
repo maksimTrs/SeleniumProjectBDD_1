@@ -9,6 +9,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
+       <!-- <webdriver.driver>firefox</webdriver.driver>-->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -86,6 +87,12 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${maven.surefire.ver}</version>
                 <configuration>
+                    <parallel>all</parallel>
+                   <!-- <threadCountClasses>4</threadCountClasses>
+                    <threadCountMethods>8</threadCountMethods>-->
+                  <!--  <perCoreThreadCount>true</perCoreThreadCount>-->
+                    <forkCount>4.5C</forkCount>
+                    <reuseForks>false</reuseForks>
                     <testFailureIgnore>true</testFailureIgnore>
                     <includes>
                         <include>**/When*.java</include>
