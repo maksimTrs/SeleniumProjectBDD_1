@@ -1,6 +1,6 @@
 node {
     stage('Git Pull') {
-        git 'https://github.com/maksimTrs/SeleniumProjectBDD_1.git/'
+        git 'https://github.com/maksimTrs/SeleniumProjectBDD_1.git'
      }
     stage('Selenium Grid starter') {
         bat '''start cmd.exe /k C:\\SeleniumGrid\\hub_1.bat
